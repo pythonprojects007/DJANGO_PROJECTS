@@ -10,4 +10,5 @@ class Country(models.Model):
         return self.name
 
 class CapitalCity(models.Model):
-    country=models.OneToOneField(Country,)
+    country=models.OneToOneField(Country,
+                                 on_delete=models.CASCADE,primary_key=True)
